@@ -1,0 +1,13 @@
+
+{
+  "name": "demoblaze-automation",
+  "version": "1.0.0",
+  "description": "Automation tests for Demoblaze",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  }
+}
