@@ -1,20 +1,16 @@
-name: Run Cypress Tests
+name: cypress-run
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: push
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -23,6 +19,4 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress run --browser chrome
-        env:
-          CI: true
+        run: npx cypress run
